@@ -1,15 +1,18 @@
 {
   "name": "twitterclient",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "apollo-boost": "^0.4.3",
+    "apollo-link-schema": "^1.2.3",
+    "graphql": "^14.4.1",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.5",
+    "oauth": "^0.9.15",
+    "react-apollo": "^2.5.8"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -27,5 +30,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "URL_OF_YOUR_REPOSITORY"
   }
 }
